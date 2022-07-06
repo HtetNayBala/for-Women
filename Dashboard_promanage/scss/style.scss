@@ -1,0 +1,127 @@
+$primary : #EC4E6E;
+$success : #CEE8CA;
+$warning : #F2BC9E;
+$secondary : #92C7E8;
+$font-family-sans-serif : 'https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&display=swap';
+
+
+.header-font-size{
+  font-size: 60px;
+}
+.second-header-font-size{
+  font-size: 37px;
+}
+.para-font-size{
+  font-size: 23px;
+}
+.divider{
+  width: 100%;
+  height: .5px;
+  background-color: gray;
+}
+.card-pics{
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.imgs-group{
+  margin-bottom: 1rem;
+  display: flex;
+}
+.show-time{
+  margin-bottom: 15px;
+}
+.navLink{
+  color: #000000;
+}
+.charts{
+  margin-bottom: 20px !important;
+}
+@media screen and(max-width:1200px) {
+
+  .in-progress{
+    padding: 0px 5px !important;
+  }
+  #add-project-header{
+    margin-bottom: 25px !important;
+
+    article{
+      h4{
+        margin-bottom: 10px !important;
+      }
+      #add-project-para{
+        margin-bottom: 5px !important;
+      };
+    }
+
+  }
+}
+
+@media screen and(max-width:900px) {
+
+  .card-pics-container{
+    margin-bottom: 20px !important;
+  }
+
+  #nav-fluid{
+    align-items: center !important;
+  }
+
+  #logo-name{
+    padding: 5px;
+  }
+
+  .navLink{
+    background-color: #000000;
+    color: #ffffff !important;
+    margin-bottom: 10px;
+    padding-left: 10px !important;
+    border-radius: 5px !important;
+  }
+
+}
+
+@media screen and (max-width: 765px){
+  #table-box{
+    //overflow: hidden !important;
+    //overflow-x: scroll !important;
+    overflow: auto !important;
+  }
+
+  #sidebar{
+    transform: translateX(-100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10 !important;
+    transition: 0.5s;
+  }
+
+  .show-sidebar{
+    transform: translateX(0px) !important;
+    background: #efebeb;
+    width: 150px !important;
+  }
+
+  #navbar-parent{
+    border-left: 0 !important;
+  }
+
+  #table{
+    width: 700px !important;
+    tbody{
+      tr{
+        td{
+          width: auto !important;
+          line-height: 54px !important;
+        };
+      }
+
+    }
+  }
+
+}
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+@import "../node_modules/@fortawesome/fontawesome-free/css/all.css";
