@@ -1,4 +1,6 @@
 $primary : #f3dbdb;
+$success : #74aff0;
+$warning : #96be9d;
 $secondary : #000000;
 $aside-font-size : 20px;
 $main-font-size : 50px;
@@ -14,7 +16,7 @@ $num-font-size: 45px;
 #aside-home{
   font-size: $aside-font-size;
   border-radius: 50%;
-  border: 4px solid $primary;
+  //border: 4px solid $primary;
   padding: 5px 50px;
   margin-bottom: 5.6rem;
 }
@@ -44,8 +46,7 @@ $num-font-size: 45px;
 
 }
 #bell-color{
-  background-color: $primary;
-  width: 15px;height: 15px;border: 1px solid black;border-radius: 50%;
+  width: 15px;height: 15px;border: 2px solid black;border-radius: 50%;
   top: -10%;
   right: -10%;
 }
@@ -60,6 +61,12 @@ $num-font-size: 45px;
 
 #quick-a{
   font-size: $second-font-size;
+}
+
+#center{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 @media screen and (max-width: 1400px){
@@ -92,11 +99,7 @@ $num-font-size: 45px;
   #search-input{
     padding-left: 10px !important;
   }
-  #center{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
+
 }
 
 @media screen and (max-width: 780px){
@@ -118,23 +121,23 @@ $num-font-size: 45px;
   #aside-list{
     margin-bottom: 0 !important;
   }
-  #center{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
+
 
 }
 
 @media screen and (max-width: 750px) {
   #aside-right-up{
-    transform: translateX(-100%);
     position: absolute;
-    transition: 0.5s;
     padding-right: 0px !important;
+    z-index: 0;
+    //visibility: hidden;
+    transform: translateX(-100%);
   }
   .aside-right-up-show{
     transform: translateX(0%) !important;
+    z-index: 1 !important;
+    transition: 0.5s !important;
+    //visibility: visible !important;
   }
   .aside-right{
     padding-right:40px !important;
@@ -143,4 +146,5 @@ $num-font-size: 45px;
 }
 
 @import '../node_modules/bootstrap/scss/bootstrap';
+//@import "../node_modules/bootstrap-icons/font/bootstrap-icons";
 @import '../node_modules/@fortawesome/fontawesome-free/css/all.min.css';

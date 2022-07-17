@@ -126,3 +126,52 @@ const myChart2 = new Chart(ctx2, {
 
 });
 
+
+$(document).ready(
+    $('#change-color').on('click',function multiJobs(){
+            let bgp = $('.bg-primary').hasClass('bg-primary');
+            let tp = $('.text-primary').hasClass('text-primary');
+            let bgs = $('.bg-success').hasClass('bg-success');
+            let ts = $('.text-success').hasClass('text-success');
+            let brp = $('.border-primary').hasClass('border-primary');
+            let brs = $('.border-success').hasClass('border-success');
+
+
+
+        if(bgp || tp || brp){
+                $('.bg-primary').addClass('bg-success')
+                $('.bg-primary').removeClass('bg-primary');
+
+                $('.text-primary').addClass('text-success')
+                $('.text-primary').removeClass('text-primary');
+
+                $('.border-primary').addClass('border-success');
+                $('.border-primary').removeClass('border-primary');
+        }
+
+            else if(bgs || ts || brs){
+                $('.bg-success').addClass('bg-warning');
+                $('.bg-success').removeClass('bg-success')
+
+                $('.text-success').addClass('text-warning')
+                $('.text-success').removeClass('text-success');
+
+                $('.border-success').addClass('border-warning');
+                $('.border-success').removeClass('border-success')
+            }
+
+
+            else{
+                $('.bg-warning').addClass('bg-primary');
+                $('.bg-warning').removeClass('bg-warning');
+
+                $('.text-warning').addClass('text-primary')
+                $('.text-warning').removeClass('text-warning');
+
+                $('.border-warning').addClass('border-primary');
+                $('.border-warning').removeClass('border-warning');
+            }
+        }
+
+    )
+)

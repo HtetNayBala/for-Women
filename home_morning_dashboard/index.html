@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Morning Dashboard</title>
     <link rel="stylesheet" href="./scss/style.css">
+    <link rel="stylesheet" href="./node_modules/feather-icons-web/feather.css">
+    <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./node_modules/animate.css/animate.min.css">
 </head>
 <body>
     <section class="container-fluid vh-100 p-0">
@@ -14,7 +17,7 @@
                 <!--Aside start-->
                 <aside class="h-100 bg-secondary">
                     <div style="padding-top: 2rem;" id="aside-home-up" class="d-flex flex-row flex-lg-column align-items-center justify-content-lg-center justify-content-between">
-                        <div id="aside-home" class="text-primary w-25 flex-column align-items-center d-none d-lg-flex">
+                        <div id="aside-home" class="text-primary w-25 flex-column align-items-center d-none d-lg-flex border border-2 border-primary rounded rounded-circle">
                             <span>My</span>
                             <span>Ho</span>
                             <span>Me</span>
@@ -32,7 +35,7 @@
                             <li class="list-unstyled aside-list-items" id="list">
                                 <i class="fa-solid fa-align-justify text-primary fa-2x fa-fw"></i>
                             </li>
-                            <li class="list-unstyled aside-list-items">
+                            <li class="list-unstyled aside-list-items animate__animated animate__headShake animate__delay-1s animate__infinite" id="change-color">
                                 <i class="fa-solid fa-certificate text-primary fa-2x fa-fw"></i>
                             </li>
                         </ul>
@@ -49,13 +52,13 @@
                             <h2 class="text-uppercase" id="water">Water Consumption</h2>
                             <div class="w-100">
                                 <div class="dropdown text-end">
-                                    <button class="btn btn-outline-dark dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                                      Dropdown button
+                                    <button class="btn btn-dark dropdown-toggle text-primary" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                      See More
                                     </button>
-                                    <ul class="dropdown-menu ps-0" aria-labelledby="dropdownMenuButton1">
-                                      <li class="list-unstyled"><a class="dropdown-item" href="#">Action</a></li>
-                                      <li class="list-unstyled"><a class="dropdown-item" href="#">Another</a></li>
-                                      <li class="list-unstyled"><a class="dropdown-item" href="#">Something</a></li>
+                                    <ul class="dropdown-menu ps-0 bg-secondary" aria-labelledby="dropdownMenuButton1">
+                                      <li class="list-unstyled"><a class="dropdown-item text-primary" href="#">Action</a></li>
+                                      <li class="list-unstyled"><a class="dropdown-item text-primary" href="#">Another</a></li>
+                                      <li class="list-unstyled"><a class="dropdown-item text-primary" href="#">Something</a></li>
                                     </ul>
                                   </div>
                             </div>
@@ -70,13 +73,13 @@
                             <h2 class="text-uppercase" id="energy">Energy Consumption</h2>
                             <div class="w-100">
                                 <div class="dropdown text-end">
-                                    <button class="btn btn-outline-dark dropdown-toggle" type="button" id="2" data-bs-toggle="dropdown" aria-expanded="false">
-                                        Dropdown button
+                                    <button class="btn btn-dark dropdown-toggle text-primary" type="button" id="2" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Show More
                                     </button>
-                                    <ul class="dropdown-menu ps-0" aria-labelledby="2">
-                                        <li class="list-unstyled"><a class="dropdown-item" href="#">Action</a></li>
-                                        <li class="list-unstyled"><a class="dropdown-item" href="#">Another</a></li>
-                                        <li class="list-unstyled"><a class="dropdown-item" href="#">Something</a></li>
+                                    <ul class="dropdown-menu ps-0 bg-secondary" aria-labelledby="2">
+                                        <li class="list-unstyled"><a class="dropdown-item text-primary" href="#">Action</a></li>
+                                        <li class="list-unstyled"><a class="dropdown-item text-primary" href="#">Another</a></li>
+                                        <li class="list-unstyled"><a class="dropdown-item text-primary" href="#">Something</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -100,7 +103,7 @@
                             <article class="d-flex justify-content-between align-items-end">
                                 <div class="position-relative">
                                     <i class="fa-solid fa-bell fa-2x"></i>
-                                    <p id="bell-color" class="position-absolute"></p>
+                                    <p id="bell-color" class="position-absolute bg-primary"></p>
                                 </div>
                                 <div class="d-flex align-items-center">
                                     <h5 class="mb-0 me-2">Poe</h5>
@@ -111,7 +114,7 @@
                             
                             <article style="margin-top: 1.5rem;">
                                 <div class="bg-white py-2 ps-2 d-flex align-items-center" id="search-input" style="border: 1px solid black">
-                                    <i class="fa-solid fa-search me-1"></i>
+                                    <i class="fa-solid fa-search me-1 text-primary"></i>
                                     <input type="text" placeholder="Search tasks" class="border border-0 w-50" id="input">
                                 </div>
                             </article>
@@ -139,20 +142,22 @@
                                 </header>
 
                                 <div class="row">
-                                    <div class="col-12 col-lg-2 col-xl-6">
-                                        <i class="fa-solid fa-lock fa-3x"></i>
+                                    <div class="col-12 col-lg-2 col-xl-4">
+                                        <i class="feather-unlock text-primary bg-secondary px-1 py-2 rounded-1" style="font-size: 3em"></i>
                                     </div>
-                                    <div class="col-12 col-lg-10 col-xl-6 text-end">
+                                    <div class="col-12 col-lg-10 col-xl-8 text-end">
                                         <h3 class="text-uppercase">Security</h3>
                                         <p class="text-capitalize">
                                             partial lock
                                         </p>
                                     </div>
                                 </div>
+
                                 <div class="divider"></div>
+
                                 <div class="row">
                                     <div class="col-12 col-lg-2 col-xl-6">
-                                        <i class="fa-solid fa-lightbulb fa-3x"></i>
+                                        <i class="bi bi-lightbulb text-primary bg-secondary p-1 rounded-1" style="font-size: 3em"></i>
                                     </div>
                                     <div class="col-12 col-lg-10 col-xl-6 text-end">
                                         <h3 class="text-uppercase">Lights</h3>
@@ -170,7 +175,7 @@
 
                                 <div class="row">
                                     <div class="col-12 col-lg-2 col-xl-6">
-                                        <i class="fa-solid fa-wifi fa-3x"></i>
+                                        <i class="bi bi-wifi text-primary bg-secondary p-1 rounded-1" style="font-size: 3em"></i>
                                     </div>
                                     <div class="col-12 col-lg-10 col-xl-6 text-end">
                                         <h3 class="text-uppercase">wifi</h3>
@@ -185,15 +190,12 @@
 
                                 <div class="divider"></div>
 
-                                <div class="row">
+                                <div class="row align-items-center">
                                     <div class="col-12 col-lg-2 col-xl-6">
-                                        <i class="fa-solid fa-plus fa-3x"></i>
+                                        <i class="bi bi-plus text-primary bg-secondary p-1 rounded-1" style="font-size: 3em"></i>
                                     </div>
                                     <div class="col-12 col-lg-10 col-xl-6 text-end">
-                                        <h3 class="text-uppercase">Wifi</h3>
-                                        <p class="text-uppercase fw-bold">
-                                            Add
-                                        </p>
+                                        <h3 class="text-uppercase mb-0">Add</h3>
                                     </div>
                                 </div>
                             </article>
@@ -215,20 +217,8 @@
 
         $('#list').click(function (){
             $('#aside-right-up').toggleClass('aside-right-up-show');
-
         })
 
-
-        // $('#list').addEventListener('click',function (){
-        //     alert('Hello ')
-        //     // if($('#aside-right-up').hasClass('d-none')){
-        //     //     $('#aside-right-up').addClass('d-block');
-        //     //     $('#aside-right-up').removeClass('d-none');
-        //     // }else{
-        //     //     $('#aside-right-up').removeClass('d-block');
-        //     //     $('#aside-right-up').addClass('d-none');
-        //     // }
-        // });
 
     </script>
 </body>
